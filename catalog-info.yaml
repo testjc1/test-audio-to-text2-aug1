@@ -1,0 +1,23 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: test-audio-to-text2-aug1 
+  description: Secure Supply Chain Example for Audio to Text Application example with AI enabled audio transcription   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:
+    # ArgoCD apps from this template used rhtap-gitops as the grouping
+    argocd/app-selector: rhtap/gitops=test-audio-to-text2-aug1  
+    janus-idp.io/tekton: test-audio-to-text2-aug1 
+    backstage.io/kubernetes-id: test-audio-to-text2-aug1 
+    backstage.io/techdocs-ref: dir:. 
+    quay.io/repository-slug: jctestorg/test-audio-to-text2-aug1
+  tags: ["ai", "whispercpp", "python", "asr"] 
+spec:
+  type: service
+  owner: user:guest 
+  lifecycle: experimental
+ 
